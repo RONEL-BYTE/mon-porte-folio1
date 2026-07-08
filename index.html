@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio de Ronel, développeur web freelance">
+    <title>Ronel | Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="page">
+    <!-- NAVIGATION -->
+    <nav class="top-nav">
+        <div class="logo-block">
+            <div class="logo">RN</div>
+            <img src="image porte folilio.jpeg" alt="Logo Ronel" class="logo-image">
+        </div>
+        <ul class="nav-links">
+            <li><a href="#apropos">À propos</a></li>
+            <li><a href="#projets">Projets</a></li>
+            <li><a href="#competences">Compétences</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    <main>
+
+    <!-- HERO -->
+    <section id="hero" class="hero-section">
+        <h1>Ronel</h1>
+        <h2>Développeur Web Freelance</h2>
+        <p>Je crée des expériences web sur mesure pour les entreprises et entrepreneurs.</p>
+        <a href="#projets" class="btn">Voir mes projets</a>
+    </section>
+
+    <section id="apropos" class="about-section">
+        <h2 class="section-title">À propos</h2>
+        <p>Je conçois des interfaces modernes, rapides et adaptées aux objectifs de mes clients, avec un focus clair sur l’expérience utilisateur et la qualité du code.</p>
+    </section>
+
+     <section id="projets">
+    <h2 class="section-title">Mes Projets</h2>
+    
+    <div class="projets-grid">
+        <div class="carte-projet">
+            <h3>App Météo SkyPlus</h3>
+            <p>Nouvelle version météo SkyPlus, plus fluide et plus rapide.</p>
+            <div class="tags">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+            </div>
+            <a href="https://soft-souffle-285942.netlify.app" target="_blank">Voir SkyPlus</a>
+        </div>
+
+        <div class="carte-projet">
+            <h3>App Météo React</h3>
+            <p>Application météo reconstruite avec React et hooks modernes</p>
+            <div class="tags">
+                <span>React</span>
+                <span>CSS</span>
+                <span>API</span>
+            </div>
+            <span class="project-link project-link--soon">Bientôt disponible</span>
+        </div>
+
+        <div class="carte-projet">
+            <h3>Todo List</h3>
+            <p>Application de gestion de tâches avec localStorage</p>
+            <div class="tags">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+            </div>
+            <span class="project-link project-link--soon">Bientôt disponible</span>
+        </div>
+    </div>
+</section>
+<!-- COMPETENCES -->
+<section id="competences">
+    <h2 class="section-title">Mes Compétences</h2>
+    
+    <div class="competences-grid">
+        <div class="competence">
+            <h3>HTML/CSS</h3>
+            <div class="barre">
+                <div class="progression w90"></div>
+            </div>
+        </div>
+
+        <div class="competence">
+            <h3>JavaScript</h3>
+            <div class="barre">
+                <div class="progression w75"></div>
+            </div>
+        </div>
+
+        <div class="competence">
+            <h3>React</h3>
+            <div class="barre">
+                <div class="progression w60"></div>
+            </div>
+        </div>
+
+        <div class="competence">
+            <h3>Git/GitHub</h3>
+            <div class="barre">
+                <div class="progression w70"></div>
+            </div>
+        </div>
+
+        <div class="competence">
+            <h3>UI/UX Design</h3>
+            <div class="barre">
+                <div class="progression w65"></div>
+            </div>
+        </div>
+
+        <div class="competence">
+            <h3>Figma</h3>
+            <div class="barre">
+                <div class="progression w80"></div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- CONTACT -->
+<section id="contact">
+    <h2 class="section-title">Me Contacter</h2>
+    <p>Disponible pour des projets freelance</p>
+    <div class="contact-liens">
+        <a href="mailto:ngomperonel135@gmail.com">📧 Email</a>
+        <a href="https://github.com/RONEL-BYTE" target="_blank" rel="noopener noreferrer">💻 GitHub</a>
+    </div>
+    </section>
+    </main>
+    <script src="index.js" defer></script>
+</body>
+</html>
