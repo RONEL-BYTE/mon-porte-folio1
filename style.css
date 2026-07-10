@@ -61,9 +61,7 @@ nav .togglebtn{
     z-index: 5;
     cursor: pointer;
     display: none;
-     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    
    
 }
 nav .togglebtn span{
@@ -136,11 +134,18 @@ nav .navlink li a{
     width: 100%;
     transition: 0.5s;
 }
+.hero-pic .profile-img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 15%;
+}
 .container .hero-pic:hover{
     transform: scale(1.2);
 }
 .hero-text{
     max-width: 500px;
+    width: 100%;
     display: flex;
     flex-direction: column;
 }
@@ -184,8 +189,8 @@ nav .navlink li a{
     transition: 0.5s;
 
 }
-.btn active{
-    background-color: #007ced;
+.btn.active{
+    border-color: #007ced;
     color: #fff;
 }
 .hero-text .social i:hover{
@@ -195,7 +200,9 @@ nav .navlink li a{
 /*gestion du responsive disign & nav bar pour les  mobile devices*/
 @media(max-width:930px) {
     nav .togglebtn{
-        
+         display: flex;
+    flex-direction: column;
+    justify-content: center;
     }
     /*pour le botton toggle*/
     .click{
