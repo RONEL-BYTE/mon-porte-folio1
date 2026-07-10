@@ -249,3 +249,17 @@ nav .navlink li a{
         padding: 40px 0px;
     }
 }
+@media (max-width: 480px) {
+  .btn-group {
+    display: flex;
+    flex-direction: column; /* Aligne les boutons verticalement */
+    align-items: center;    /* Centre les boutons horizontalement */
+    gap: 15px;             /* Ajoute un espace de 15px entre les deux boutons */
+    width: 100%;           /* Force le groupe à occuper toute la largeur disponible */
+  }
+
+  .btn-group a {
+    width: 80%;            /* Donne une largeur harmonieuse aux boutons */
+    text-align: center;    /* Centre le texte à l'intérieur du bouton */
+  }
+}
