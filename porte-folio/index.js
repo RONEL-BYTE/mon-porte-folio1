@@ -24,8 +24,39 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
  //Animation d'entrée pour le titre principal
+ 
 gsap.from("h1", {
-  duration:1 ,
+  duration:3 ,
   y: -50 ,
   opacity :0
+});
+
+gsap.from("h2", {
+           duration:3,
+           y: -50 ,
+           opacity :0,
+           delay: 1
+});
+
+gsap.from(".btn",{
+  duration:3 ,
+  scale:0 ,
+  opacity:0,
+  deplay:1
+});
+
+gsap.from(".carte-projet",{
+  duration:0.8,
+  y:50,
+  opacity:100,
+  opacity:0,
+  stagger:0.2,
+  delay:0.5
+});
+gsap.from('.profile-img', { 
+    duration: 1.5, 
+    x: 50, 
+    opacity: 0, 
+    ease: 'power2.out', 
+    delay: 0.5 
 });
