@@ -136,7 +136,7 @@ nav .navlink li a:focus-visible {
     position: fixed;
     inset: 0;
     background: rgba(0, 0, 0, 0.5);
-    z-index: 9998;
+    z-index: 10002;
     opacity: 0;
     transition: opacity 0.3s ease;
     pointer-events: none;
@@ -239,6 +239,22 @@ nav .navlink li a:focus-visible {
 }
 
 @media (max-width: 930px) {
+    header {
+        position: relative;
+        z-index: 10002;
+    }
+
+    .container {
+        position: relative;
+        z-index: 1;
+    }
+
+    body.menu-open .container,
+    body.menu-open .hero-text,
+    body.menu-open .hero-pic {
+        pointer-events: none;
+    }
+
     nav .togglebtn {
         display: flex;
         flex-direction: column;
@@ -246,7 +262,7 @@ nav .navlink li a:focus-visible {
         position: fixed;
         top: 45px;
         right: 20px;
-        z-index: 10001;
+        z-index: 10004;
     }
 
     nav .togglebtn.click span {
@@ -273,19 +289,24 @@ nav .navlink li a:focus-visible {
         width: 70%;
         max-width: 320px;
         height: 100vh;
+        height: 100dvh;
         background-color: #222;
-        z-index: 9999;
+        z-index: 10003;
         box-shadow: -5px 0 30px rgba(0, 0, 0, 0.5);
         transition: right 0.5s ease;
         padding: 100px 20px 25px;
         display: flex;
         flex-direction: column;
         align-items: center;
+        pointer-events: auto;
+        isolation: isolate;
     }
 
     nav .navlink li {
         display: block;
         width: 100%;
+        position: relative;
+        z-index: 1;
     }
 
     nav .navlink li a {
@@ -294,6 +315,8 @@ nav .navlink li a:focus-visible {
         margin-bottom: 25px;
         text-align: center;
         font-size: 22px;
+        position: relative;
+        z-index: 2;
     }
 
     nav .navlink.open {

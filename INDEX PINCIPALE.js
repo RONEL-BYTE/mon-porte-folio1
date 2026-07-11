@@ -65,7 +65,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (typeof gsap !== 'undefined') {
         const mm = gsap.matchMedia()
 
-        mm.add('(min-width: 481px)', () => {
+        mm.add('(min-width: 931px)', () => {
             gsap.from('header', { duration: 2, y: -100, opacity: 0, ease: 'power2.out' })
             gsap.from('.hero-pic', { duration: 2, x: -100, opacity: 0, ease: 'power2.out', delay: 0.1 })
             gsap.from('.hero-text h5', { duration: 0.5, y: 30, opacity: 0, ease: 'power2.out', delay: 0.5 })
@@ -75,14 +75,16 @@ document.addEventListener('DOMContentLoaded', () => {
             gsap.from('.social', { duration: 2.5, y: 30, opacity: 0, ease: 'power2.out', delay: 1.5 })
         })
 
-        mm.add('(max-width: 480px)', () => {
-            gsap.from('header', { duration: 1.5, y: -50, opacity: 0, ease: 'power2.out' })
-            gsap.from('.hero-pic', { duration: 1.5, y: -30, opacity: 0, ease: 'power2.out', delay: 0.1 })
-            gsap.from('.hero-text h5', { duration: 0.5, y: 15, opacity: 0, ease: 'power2.out', delay: 0.3 })
-            gsap.from('.hero-text h1', { duration: 1.5, y: 15, opacity: 0, ease: 'power2.out', delay: 0.5 })
-            gsap.from('.hero-text p', { duration: 1.5, y: 15, opacity: 0, ease: 'power2.out', delay: 0.7 })
-            gsap.from('.btn-group', { duration: 1.5, y: 15, opacity: 0, ease: 'power2.out', delay: 0.9 })
-            gsap.from('.social', { duration: 1.5, y: 15, opacity: 0, ease: 'power2.out', delay: 1.1 })
+        mm.add('(max-width: 930px)', () => {
+            const mobileAnim = { ease: 'power2.out', clearProps: 'transform' }
+
+            gsap.from('header', { duration: 1.5, y: -50, opacity: 0, ...mobileAnim })
+            gsap.from('.hero-pic', { duration: 1.5, y: -30, opacity: 0, delay: 0.1, ...mobileAnim })
+            gsap.from('.hero-text h5', { duration: 0.5, y: 15, opacity: 0, delay: 0.3, ...mobileAnim })
+            gsap.from('.hero-text h1', { duration: 1.5, y: 15, opacity: 0, delay: 0.5, ...mobileAnim })
+            gsap.from('.hero-text p', { duration: 1.5, y: 15, opacity: 0, delay: 0.7, ...mobileAnim })
+            gsap.from('.btn-group', { duration: 1.5, y: 15, opacity: 0, delay: 0.9, ...mobileAnim })
+            gsap.from('.social', { duration: 1.5, y: 15, opacity: 0, delay: 1.1, ...mobileAnim })
         })
     }
 })
