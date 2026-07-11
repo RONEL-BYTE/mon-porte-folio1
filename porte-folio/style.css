@@ -22,7 +22,7 @@ main {
 
 
   
-nav{
+nav {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -37,23 +37,28 @@ nav{
     z-index: 100;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
-    ul{
-      display: flex;
-      flex-direction: row;
-      list-style: none;
-      gap: 20px;
-       position: center;
-       align-items: center;
-       padding: 0;
-       margin: 0;
-    }
-    ul li {
-      margin-right: 20px;
-    }
-    ul li a{
-      text-decoration: none;
 
-    }
+nav ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    gap: 20px;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li a {
+    color: #f8fafc;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover,
+nav ul li a:focus-visible {
+    color: #c7d2fe;
+}
 .logo-block {
   display: flex;
   flex-direction: column;
@@ -104,6 +109,35 @@ nav{
 
 section {
   margin-bottom: 60px;
+  scroll-margin-top: 90px;
+}
+
+section h2 {
+  text-align: center;
+  margin-bottom: 24px;
+  font-size: clamp(1.4rem, 2.4vw, 1.8rem);
+}
+
+#hero {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+#hero h1 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  margin-bottom: 10px;
+}
+
+#hero h2 {
+  font-size: clamp(1.2rem, 3vw, 1.6rem);
+  margin-top: 0;
+  color: #dbeafe;
+}
+
+#hero p {
+  max-width: 680px;
+  margin: 0 auto;
+  font-size: 1.05rem;
 }
 
 .hero-section {
@@ -256,13 +290,13 @@ section {
 }
 
 @media (max-width: 700px) {
-  .top-nav {
+  nav {
     flex-direction: column;
     gap: 16px;
     padding: 20px;
   }
 
-  .nav-links {
+  nav ul {
     flex-wrap: wrap;
     justify-content: center;
   }

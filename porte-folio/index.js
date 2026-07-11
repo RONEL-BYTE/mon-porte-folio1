@@ -1,62 +1,54 @@
-// Ce fichier peut être utilisé pour ajouter des interactions futures.
-// Exemple : animation de défilement ou ouverture de modales.
-
 document.addEventListener('DOMContentLoaded', () => {
-  const liens = document.querySelectorAll('nav a');
-  const href = lien.getAttribute('href');
-  liens.forEach(lien => {
-    const href = lien.getAttribute('href');
-    lien.addEventListener('click', event => {
-      event.preventDefault();
-      const cible = document.querySelector(lien.getAttribute('href'));
-        if (href && href.startsWith('#')) {
-    event.preventDefault();
-    // Votre code pour le défilement fluide ici
-}
-      if (cible) {
-        cible.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }
-      if (href && href.startsWith('#')) {
-    event.preventDefault();
-    // Votre code pour le défilement fluide ici
-}
-    });
-  });
-});
- //Animation d'entrée pour le titre principal
- 
-gsap.from("h1", {
-  duration:3 ,
-  y: -50 ,
-  opacity :0
-});
+    document.querySelectorAll('nav a').forEach(lien => {
+        lien.addEventListener('click', event => {
+            const href = lien.getAttribute('href')
+            if (href?.startsWith('#')) {
+                event.preventDefault()
+                document.querySelector(href)?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+            }
+        })
+    })
 
-gsap.from("h2", {
-           duration:3,
-           y: -50 ,
-           opacity :0,
-           delay: 1
-});
+    if (typeof gsap === 'undefined') return
 
-gsap.from(".btn",{
-  duration:3 ,
-  scale:0 ,
-  opacity:0,
-  deplay:1
-});
+    gsap.from('h1', {
+        duration: 1.2,
+        y: -50,
+        opacity: 0,
+        ease: 'power2.out'
+    })
 
-gsap.from(".carte-projet",{
-  duration:0.8,
-  y:50,
-  opacity:100,
-  opacity:0,
-  stagger:0.2,
-  delay:0.5
-});
-gsap.from('.profile-img', { 
-    duration: 1.5, 
-    x: 50, 
-    opacity: 0, 
-    ease: 'power2.out', 
-    delay: 0.5 
-});
+    gsap.from('h2', {
+        duration: 1.2,
+        y: -50,
+        opacity: 0,
+        delay: 0.3,
+        ease: 'power2.out'
+    })
+
+    gsap.from('.btn', {
+        duration: 1,
+        scale: 0,
+        opacity: 0,
+        delay: 0.6,
+        ease: 'back.out(1.7)'
+    })
+
+    gsap.from('.carte-projet', {
+        duration: 0.8,
+        y: 50,
+        opacity: 0,
+        stagger: 0.2,
+        delay: 0.5,
+        ease: 'power2.out'
+    })
+
+    gsap.from('.competence', {
+        duration: 0.8,
+        y: 30,
+        opacity: 0,
+        stagger: 0.15,
+        delay: 0.8,
+        ease: 'power2.out'
+    })
+})
