@@ -292,7 +292,7 @@ nav .navlink li a:focus-visible {
         height: 100dvh;
         background-color: #222;
         z-index: 10003;
-        box-shadow: -5px 0 30px rgba(0, 0, 0, 0.5);
+        box-shadow: -5px 0 30px rgba(0, 0, 0, 0.8);
         transition: right 0.5s ease;
         padding: 100px 20px 25px;
         display: flex;
@@ -306,7 +306,7 @@ nav .navlink li a:focus-visible {
         display: block;
         width: 100%;
         position: relative;
-        z-index: 1;
+        z-index: 16;
     }
 
     nav .navlink li a {
@@ -316,7 +316,9 @@ nav .navlink li a:focus-visible {
         text-align: center;
         font-size: 22px;
         position: relative;
-        z-index: 2;
+        z-index: 16;
+        cursor: pointer;
+
     }
 
     nav .navlink.open {
